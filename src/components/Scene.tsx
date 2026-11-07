@@ -14,6 +14,9 @@ type MotionData = { cameraViews: CameraView[] }
 
 type RenderMaterial = THREE.Material
 
+const MODEL_URL = '/model/industrial_assembly_machine.glb'
+const DRACO_URL = '/draco/'
+
 const industrialMotion = industrialData as unknown as MotionData
 
 /** Quintic smootherstep between keyframes. */
@@ -40,7 +43,7 @@ function disposeAll(materials: THREE.Material[]) {
 }
 
 function IndustrialModel({ reduced }: { reduced: boolean }) {
-  const { scene } = useGLTF('/model/industrial_assembly_machine.glb')
+  const { scene } = useGLTF(MODEL_URL, DRACO_URL)
   const industrialModel = useMemo(() => scene.clone(), [scene])
   const trail = useMemo(() => scene.clone(), [scene])
   const group = useRef<Group>(null)
@@ -211,4 +214,4 @@ export default function Scene() {
   )
 }
 
-useGLTF.preload('/model/industrial_assembly_machine.glb')
+useGLTF.preload(MODEL_URL, DRACO_URL)
