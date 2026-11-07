@@ -24,7 +24,7 @@ a{color:inherit}
 .nav__dd:hover .nav__menu,.nav__dd:focus-within .nav__menu{opacity:1;visibility:visible;transform:none}
 .nav__menu a{padding:9px 12px;border-radius:6px;text-decoration:none;color:#ccc}.nav__menu a:hover{background:#ffffff14;color:#fff}
 .nav__cta{background:var(--am);color:#111;padding:6px 14px;border-radius:7px;font-weight:500}
-@media(max-width:640px){.nav__dd,.nav__links>a:not(.nav__cta){display:none}.nav{width:calc(100% - 20px);padding:0 14px}}
+@media(max-width:640px){.nav__dd,.nav__links>a:not(.nav__cta){display:none}.nav{top:max(10px,env(safe-area-inset-top));width:calc(100% - 20px);padding:0 12px;height:42px}.nav__links{gap:0}.nav__cta{padding:7px 11px;font-size:11px}}
 /* stage */
 .stage{height:760vh;position:relative;background:var(--g)}
 .stage__pin{position:sticky;top:0;height:100vh;overflow:hidden;background:radial-gradient(ellipse at 62% 45%,#2b2a27 0,var(--g) 62%)}
@@ -41,7 +41,7 @@ a{color:inherit}
 .chapter--hero .chapter__copy{max-width:460px;font-size:clamp(15px,1.35vw,18px);line-height:1.5}
 .chapter__stat{display:flex;align-items:baseline;gap:14px;border-top:1px solid #ffffff2e;padding-top:14px}
 .chapter__stat b{font:400 34px var(--serif)}.chapter__stat span{color:var(--al)}
-@media(max-width:760px){.chapter{bottom:9vh}.chapter--r{right:auto;left:var(--pad)}.chapter--hero{top:14vh}.chapter__title{font-size:clamp(42px,12vw,76px)}.chapter--hero .chapter__title{font-size:clamp(52px,14vw,88px)}.chapter__copy{font-size:14px}}
+@media(max-width:760px){.stage{height:680vh}.stage__pin{height:100svh;min-height:560px}.chapter{bottom:10vh;width:calc(100% - 40px)}.chapter--r{right:auto;left:20px}.chapter--hero{top:15vh;width:calc(100% - 40px)}.chapter__tag{margin-bottom:14px;font-size:10px;line-height:1.4}.chapter__title{font-size:clamp(42px,12vw,76px)}.chapter--hero .chapter__title{font-size:clamp(52px,14vw,88px);line-height:.9}.chapter__copy{font-size:14px}.chapter--hero .chapter__copy{font-size:15px;max-width:340px;margin-top:18px}.chapter__stat{gap:10px;padding-top:12px}.chapter__stat b{font-size:30px}}
 .rail{position:absolute;right:var(--pad);top:50%;transform:translateY(-50%);color:var(--iv);display:flex;gap:14px}
 .rail__track{width:1px;height:170px;background:#ffffff2a;position:relative;overflow:hidden}.rail__track em{position:absolute;inset:0;background:var(--am);transform-origin:top;transform:scaleY(0)}
 .rail ol{list-style:none;padding:0;display:flex;flex-direction:column;justify-content:space-between;height:170px}
@@ -96,4 +96,5 @@ input[type=range]{width:100%;accent-color:var(--am)}
 .btn{display:inline-block;text-align:center;text-decoration:none;background:var(--g);color:var(--iv);padding:16px 24px;border-radius:6px;font-weight:500;transition:transform .3s}.btn:hover{transform:translateY(-2px)}
 .foot{background:var(--g);color:var(--al);padding:28px var(--pad);display:flex;gap:16px 40px;justify-content:space-between;flex-wrap:wrap;line-height:1.7}
 @media(max-width:860px){.process,.lineup,.specs,.calc,.enq{grid-template-columns:1fr}.apps{grid-template-columns:1fr}.app:nth-child(2){margin-top:0}dl>div{grid-template-columns:110px 1fr}}
+@media(max-width:640px){:root{--pad:20px}.loader__name{font-size:36px}.loader__bar{width:min(220px,70vw)}.sec{padding-top:88px;padding-bottom:88px}.sec__head{margin-bottom:38px}h2{font-size:clamp(42px,12vw,64px)}.lede{font-size:16px}.process{gap:30px}.process__list button{min-height:62px;padding:16px 0}.process__list strong{font-size:17px}.process__list p{font-size:13px}.process__fig,.lineup__fig{aspect-ratio:1/1}.lineup{gap:34px}.tabs{gap:6px;margin-top:26px;flex-wrap:wrap}.tabs button{padding:10px 14px}.specs{gap:38px}.specs__big{gap:26px}.specs__big b{font-size:clamp(64px,18vw,96px)}dl>div{grid-template-columns:1fr;gap:6px;padding:14px 0}dd{font-size:15px}.calc{gap:34px}.calc__panel{padding:20px;gap:20px}.calc__out b{font-size:clamp(48px,15vw,72px)}.app img{aspect-ratio:16/10}.app h3{font-size:26px}.enq{gap:34px}.enq__meta{margin-top:22px}.enq__form input,.enq__form select,.enq__form textarea{font-size:16px}.btn{width:100%;padding:15px 20px}.foot{padding-top:24px;padding-bottom:24px;flex-direction:column;gap:8px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
